@@ -1,8 +1,8 @@
-import cv2
 import numpy as np
+import cv2
 import streamlit as st
-from ultralytics import YOLO
-from deep_sort_realtime.deepsort_tracker import DeepSort
+from ultralytics import YOLO # type: ignore
+from deep_sort_realtime.deepsort_tracker import DeepSort # type: ignore
 
 # Cấu hình Streamlit
 st.set_page_config(layout="wide")
