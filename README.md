@@ -1,19 +1,55 @@
-# 🎈 Blank app template
+# Vehicle Detection and Counting System on Streamlit
 
-A simple Streamlit app template for you to modify!
+![Demo image](Resources/demo.jpg)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Introduction
+This project is used to count and detect vehicle on the highway. It can detect 4 types of vehicles: car, motorcycle, bus, truck.
+I run this project on Python 3.9.7
 
-### How to run it on your own machine
+#
+* [YOLOv5](https://github.com/ultralytics/yolov5/releases) to detect objects on each of the video frames.
 
-1. Install the requirements
+* [Deep SORT](https://github.com/nwojke/deep_sort) to track those objects over different frames and help counting.
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+* [Streamlit](https://github.com/streamlit/streamlit) to build a simple web.
+## Installation
 
-2. Run the app
+* Install essential libraries and packages:
+```python
+pip install -r requirements.txt
+```
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+* Run demo:
+```python
+streamlit run demo.py --server.maxUploadSize=500
+```
+
+**NOTE**: If the web keeps showing "Please wait...", try to install streamlit version 1.11.0
+```python
+pip install streamlit==1.11.0
+```
+
+If the web shows error "no module easydict"
+```python
+pip install easydict
+```
+
+# DEMO
+
+## Steps:
+1. Click ```Browse files``` to input video
+
+2. Setting *Custom classes*, *Confidence* and *Line position*
+
+![Settings](Resources/setting.jpg)
+* Custom classes: choose classes you want to detect
+
+* Confidence: the probability that one object belongs to one class
+
+* Line position: the position of green line, any vehicle have coordinate below the line will be counted
+
+3. Click ```START```
+
+## Result
+
+![demo](Resources/new_demo.gif)
