@@ -69,7 +69,7 @@ if app_mode == "About App":
         
 elif app_mode == "Count Vehicles From Video":
         
-    # bbox_color = st.sidebar.color_picker("Bbox Color", "#ffffff")
+    bbox_color = st.sidebar.color_picker("Bbox Color", "#ffffff")
     # st.sidebar.markdown("---")
     
     # detection_threshold = st.sidebar.slider("Detection Threshold", 0.0, 1.0, 0.5, 0.01)
@@ -194,4 +194,3 @@ elif app_mode == "Count Vehicles From Video":
     #             start_time = time.time()
             
     #         fps_markdown.markdown(f"## {fps:.2f}")
-
