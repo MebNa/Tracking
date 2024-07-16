@@ -1,21 +1,6 @@
 
-seaborn
-six==1.16.0
 streamlit
-sympy==1.12
-tensorboard==2.13.0
-tensorboard-data-server==0.7.1
-tensorflow==2.13.0
-tensorflow-estimator==2.13.0
-tensorflow-io-gcs-filesystem==0.31.0
-thop==0.1.1.post2209072238
-torch==2.0.1
-torchvision==0.15.2
-tqdm==4.65.0
-webcolors==1.13
-webencodings==0.5.1
-websocket-client==1.6.1
-Werkzeug==2.3.6
-wrapt==1.15.0
-yarg==0.1.9
-zipp==3.16.2
+opencv-python
+Pillow
+ultralytics
+torch
