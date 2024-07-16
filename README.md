@@ -1,55 +1,43 @@
-# Vehicle Detection and Counting System on Streamlit
 
-![Demo image](Resources/demo.jpg)
+# Vehicle Tracking using YOLOv8 and DeepSORT
 
-## Introduction
-This project is used to count and detect vehicle on the highway. It can detect 4 types of vehicles: car, motorcycle, bus, truck.
-I run this project on Python 3.9.7
+This is a vehicle tracking project that uses YOLOv8 for object detection and DeepSORT for tracking the detected vehicles. The project also has a GUI built using Streamlit, which makes it easy to use and visualize the results.
 
-#
-* [YOLOv5](https://github.com/ultralytics/yolov5/releases) to detect objects on each of the video frames.
+<img src="img/of-2.gif">
 
-* [Deep SORT](https://github.com/nwojke/deep_sort) to track those objects over different frames and help counting.
+## Usage
 
-* [Streamlit](https://github.com/streamlit/streamlit) to build a simple web.
-## Installation
+You can view or test app at: https://vehicletracking.streamlit.app
 
-* Install essential libraries and packages:
-```python
-pip install -r requirements.txt
+This project is built using following resources
+
+- Python 3
+- YOLO v8
+- DeepSORT
+- PyTorch
+- OpenCV
+- Streamlit
+
+Run the following command to start the Streamlit app:
+
+```
+streamlit run main.py
 ```
 
-* Run demo:
-```python
-streamlit run demo.py --server.maxUploadSize=500
-```
+You can now open the app in your web browser at localhost:8051.
 
-**NOTE**: If the web keeps showing "Please wait...", try to install streamlit version 1.11.0
-```python
-pip install streamlit==1.11.0
-```
+The app provides the following functionality:
 
-If the web shows error "no module easydict"
-```python
-pip install easydict
-```
+- Detect Vehicle from image
+- Track vehicles from video
+- Count Vehicle (in/out) from video
 
-# DEMO
 
-## Steps:
-1. Click ```Browse files``` to input video
+## References
 
-2. Setting *Custom classes*, *Confidence* and *Line position*
+This project is using following resources:
 
-![Settings](Resources/setting.jpg)
-* Custom classes: choose classes you want to detect
-
-* Confidence: the probability that one object belongs to one class
-
-* Line position: the position of green line, any vehicle have coordinate below the line will be counted
-
-3. Click ```START```
-
-## Result
-
-![demo](Resources/new_demo.gif)
+- [YOLOv8](https://github.com/ultralytics/ultralytics)
+- [DeepSORT](https://github.com/nwojke/deep_sort)
+- [Streamlit](https://streamlit.io/)
+- [PyTorch](https://pytorch.org/)
