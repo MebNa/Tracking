@@ -5,14 +5,14 @@ from PIL import Image
 import tempfile
 import numpy as np
 # from ultralytics import YOLO 
-from ultralytics.yolo.engine.model import YOLO
+# from ultralytics.yolo.engine.model import YOLO
 import torch
 
 
 
-from io import BytesIO
-import base64
-from tracker import Tracker
+# from io import BytesIO
+# import base64
+# from tracker import Tracker
 
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
@@ -20,15 +20,15 @@ st.title("Vehicle Tracking")
 
 hex2rgb = lambda hex : tuple(int(hex.lstrip('#')[i:i+2], 16) for i in (0, 2, 4))
 
-@st.cache_resource
-def get_yolo_model():
-    model = YOLO("model/best.pt")
-    model.fuse()
-    return model
+# @st.cache_resource
+# def get_yolo_model():
+#     model = YOLO("model/best.pt")
+#     model.fuse()
+#     return model
 
-model = get_yolo_model()
+# model = get_yolo_model()
 
-class_names = model.names
+# class_names = model.names
 
 # tracker = Tracker()
 
